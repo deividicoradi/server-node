@@ -1,8 +1,26 @@
 POST http://localhost:3333/events
-Content-Type: application/json
+Content-Type: 'application/json'
 
 {
-  "title": "Unit Summit 2",
-  "details": "Segundo evento para que é apaixonado por programação",
-  "maximumAttendees": 100
+  "title": "Novo Evento Unite",
+  "details" : null,
+  "maximumAttendees": 1
 }
+
+###
+
+POST http://localhost:3333/events/9f064adc-38e0-4f1f-9b11-de7f82c8fe26/attendees
+Content-Type: 'application/json'
+
+{
+  "name": "Deividi Coradi",
+  "email" : "deividi@teste.com"
+}
+
+###
+
+GET http://localhost:3333/events/9f064adc-38e0-4f1f-9b11-de7f82c8fe26
+
+###
+
+GET http://localhost:3333/attendees/2/badge
