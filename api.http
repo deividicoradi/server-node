@@ -4,12 +4,12 @@ Content-Type: 'application/json'
 {
   "title": "Novo Evento Unite",
   "details" : null,
-  "maximumAttendees": 1
+  "maximumAttendees": 120
 }
 
 ###
 
-POST http://localhost:3333/events/9f064adc-38e0-4f1f-9b11-de7f82c8fe26/attendees
+POST http://localhost:3333/events/70da7987-bad6-4217-8abf-5c36dca07863/attendee
 Content-Type: 'application/json'
 
 {
@@ -18,9 +18,15 @@ Content-Type: 'application/json'
 }
 
 ###
+GET http://localhost:3333/events/05cb3e61-67d4-4e6a-8bc6-6f5b4d759bbb
+###
 
-GET http://localhost:3333/events/9f064adc-38e0-4f1f-9b11-de7f82c8fe26
+GET http://localhost:3333/attendees/1/badge
 
 ###
 
-GET http://localhost:3333/attendees/2/badge
+GET http://localhost:3333/attendees/1/check-in
+
+###
+
+GET http://localhost:3333/events/05cb3e61-67d4-4e6a-8bc6-6f5b4d759bbb/attendees
